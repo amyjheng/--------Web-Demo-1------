@@ -141,7 +141,6 @@
 
         .search-box {
             padding: 0 36px;
-
             box-sizing: border-box;
         }
 
@@ -266,6 +265,34 @@
             background-color: wheat;
             transition: all 0.3s ease;
         }
+
+        .position-absolute {
+            position: absolute;
+
+        }
+
+        .position-relative {
+            position: relative;
+        }
+
+        .top-0 {
+            top: 0;
+        }
+
+        .left-0 {
+            left: 0;
+        }
+
+        .search-icon {
+            top: 50%;
+            right: 12px;
+            transform: translateY(-60%);
+        }
+
+        .search-icon>i {
+            font-size: 24px;
+            color: #FFB800;
+        }
     </style>
 </head>
 
@@ -299,7 +326,12 @@
             <div class="display-box">
                 <h2 class="display-text md-display-text text-center">Taipei ,今天冷</h2>
                 <div class="search-box border-bx text-center">
-                    <input class="border-bx" type="text" placeholder="玩哪兒?">
+                    <div class="position-relative">
+                        <input class="border-bx" type="text" placeholder="玩哪兒?">
+                        <div class="position-absolute search-icon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
