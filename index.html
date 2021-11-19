@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taiwan Go</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         * {
             padding: 0;
@@ -214,6 +215,57 @@
             color: #FFF;
             cursor: pointer;
         }
+
+        .h3 {
+            /* position: absolute; */
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            padding: 32px 18px;
+            padding-bottom: 20px;
+
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .card {
+            position: relative;
+            width: 155px;
+            height: 155px;
+            left: 25px;
+            top: 0px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
+            padding-bottom: 25px;
+        }
+
+        .col {
+            padding: 0 9px;
+        }
+
+        .card>h4 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 6px 35px 6px 14px;
+        }
+
+        .card>i {
+            display: block;
+        }
+
+        .card>img {
+            left: 0px;
+            display: block;
+        }
+
+        .card:hover {
+            background-color: wheat;
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 
@@ -258,6 +310,30 @@
                 <button class="px-6 btn">桃園市</button>
                 <button class="px-6 btn">新竹市</button>
                 <button class="px-6 btn">苗栗市</button>
+            </div>
+            <div class="container">
+                <h3 class="flex justify-content-center align-items-center">週末好去處</h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <img class="card" src="/image/city.png" alt="">
+                            <h4 class="flex align-items-center justify-content-between">
+                                <span>台北象山</span>
+                                <i class="fa fa-eye"></i>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img class="card" src="/image/city.png" alt="">
+                            <h4 class="flex align-items-center justify-content-between">
+                                <span>高雄柴山</span>
+                                <i class="fa fa-eye"></i>
+                            </h4>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
