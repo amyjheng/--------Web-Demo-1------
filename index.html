@@ -180,6 +180,40 @@
         .border-bx {
             box-sizing: border-box;
         }
+
+        .pt-35 {
+            padding-top: 35px;
+        }
+
+        .pb-18 {
+            padding-bottom: 18px;
+        }
+
+        .pb-32 {
+            padding-bottom: 32px;
+        }
+
+        .px-6 {
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+
+        .btn {
+            padding: 5px 15px;
+            border-radius: 100px;
+            color: black;
+            background-color: #FFB800;
+            border: 0;
+            font-size: 15px;
+            transition: all 0.3s ease;
+
+        }
+
+        .btn:hover {
+            background-color: cadetblue;
+            color: #FFF;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -215,6 +249,15 @@
                 <div class="search-box border-bx text-center">
                     <input class="border-bx" type="text" placeholder="玩哪兒?">
                 </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="pt-35 pb-18 text-center">附近城市</h2>
+            <div class="flex pb-32 justify-content-center ">
+                <button class="px-6 btn">台北市</button>
+                <button class="px-6 btn">桃園市</button>
+                <button class="px-6 btn">新竹市</button>
+                <button class="px-6 btn">苗栗市</button>
             </div>
         </section>
     </main>
