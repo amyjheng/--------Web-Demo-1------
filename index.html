@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiwan Go</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        .align-items-center {
+            align-items: center;
+
+        }
+
+        .pt-20 {
+            padding-top: 20px;
+        }
+
+        .px-24 {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .px-20 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .px-lg-40 {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .logo-h1 {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 44px;
+            color: #FFFFFF;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        .like img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .banner {
+            background-image: url(./image/banner.png);
+            height: 667px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .position-fixed {
+            position: fixed;
+            left: 0;
+            right: 0;
+        }
+
+        @media (min-width: 768px) {
+
+            .md-block {
+                display: block;
+            }
+
+            .md-display-text {
+                font-size: 100px;
+                line-height: 136px;
+            }
+
+            .hide {
+                display: block;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            .px-lg-40 {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+
+        .ul-dec {
+            list-style: none;
+
+        }
+
+
+        nav>ul>li>a {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        nav>ul>li>a:hover {
+            text-decoration: underline;
+        }
+
+        .display-box {
+            width: 100%;
+            box-sizing: border-box;
+            /*pd會凸出去下border box*/
+
+        }
+
+        .display-text {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 49px;
+            color: #FFF;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+            margin-bottom: 17px;
+        }
+
+        .search-box {
+            padding: 0 36px;
+
+            box-sizing: border-box;
+        }
+
+        .search-box input {
+            border-radius: 99px;
+            border: 0;
+            height: 50px;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+            padding-left: 27px;
+            box-sizing: border-box;
+            max-width: 800px;
+        }
+
+        .search-box input ::placeholder {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            color: #7E7E7E;
+
+        }
+
+        .search-box input:hover {
+            background-color: wheat;
+
+        }
+
+        .search-box input:focus {
+            outline: none;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .border-bx {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="position-fixed flex justify-content-between align-items-center pt-20 px-24">
+        <div class="logo">
+            <h1 class="logo-h1">Taiwan Go</h1>
+        </div>
+        <nav class="md-block hide">
+            <ul class="flex ul-dec">
+                <li class="px-20 px-lg-20">
+                    <a href="javascript:;">找美食</a>
+                </li>
+                <li class="px-20 px-lg-20">
+                    <a href="javascript:;">找好玩</a>
+                </li>
+                <li class="px-20 px-lg-20">
+                    <a href="javascript:;">找住宿</a>
+                </li>
+                <li class="px-20 px-lg-20">
+                    <a href="javascript:;">找好友<a>
+                </li>
+            </ul>
+        </nav>
+        <div class="like">
+            <img src="./image/like.png" alt="like">
+        </div>
+    </header>
+    <main>
+        <section class="banner flex justify-content-center align-items-center">
+            <div class="display-box">
+                <h2 class="display-text md-display-text text-center">Taipei ,今天冷</h2>
+                <div class="search-box border-bx text-center">
+                    <input class="border-bx" type="text" placeholder="玩哪兒?">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
