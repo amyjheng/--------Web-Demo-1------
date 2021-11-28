@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,16 @@
             margin: 0;
         }
 
+        ul {
+            list-style: none;
+        }
+
         .flex {
             display: flex;
+        }
+
+        .flex-deco {
+            flex-direction: column;
         }
 
         .hide {
@@ -31,7 +39,10 @@
 
         .align-items-center {
             align-items: center;
+        }
 
+        .text-center {
+            text-align: center;
         }
 
         .pt-20 {
@@ -48,17 +59,12 @@
             padding-right: 20px;
         }
 
-        .px-lg-40 {
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-
-        .logo-h1 {
+        .logo h1 {
             font-weight: bold;
             font-size: 32px;
             line-height: 44px;
-            color: #FFFFFF;
             text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+            color: #FFFFFF;
         }
 
         .like img {
@@ -68,10 +74,10 @@
 
         .banner {
             background-image: url(./image/banner.png);
-            height: 667px;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            height: 667px;
         }
 
         .position-fixed {
@@ -80,42 +86,11 @@
             right: 0;
         }
 
-        @media (min-width: 768px) {
-
-            .md-block {
-                display: block;
-            }
-
-            .md-display-text {
-                font-size: 100px;
-                line-height: 136px;
-            }
-
-            .hide {
-                display: block;
-            }
-        }
-
-        @media (min-width: 992px) {
-
-            .px-lg-40 {
-                padding-left: 40px;
-                padding-right: 40px;
-            }
-        }
-
-
-        .ul-dec {
-            list-style: none;
-
-        }
-
-
         nav>ul>li>a {
             font-weight: 500;
             font-size: 24px;
             line-height: 33px;
-            color: #FFF;
+            color: #fff;
             text-decoration: none;
         }
 
@@ -123,62 +98,85 @@
             text-decoration: underline;
         }
 
+        .w-100 {
+            width: 100%;
+        }
+
         .display-box {
             width: 100%;
-            box-sizing: border-box;
-            /*pd會凸出去下border box*/
-
         }
 
         .display-text {
             font-weight: 500;
             font-size: 36px;
             line-height: 49px;
-            color: #FFF;
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+            text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+            color: #fff;
             margin-bottom: 17px;
         }
 
         .search-box {
             padding: 0 36px;
-            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .search-box input {
-            border-radius: 99px;
+            width: 85%;
             border: 0;
             height: 50px;
-            width: 100%;
-            background-color: #fff;
+            border-radius: 99px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+            background-color: #fff;
             padding-left: 27px;
-            box-sizing: border-box;
             max-width: 800px;
         }
 
-        .search-box input ::placeholder {
+        .search-box input::placeholder {
+            color: #7E7E7E;
             font-weight: 500;
             font-size: 18px;
-            line-height: 25px;
-            color: #7E7E7E;
-
         }
 
-        .search-box input:hover {
-            background-color: wheat;
-
-        }
-
-        .search-box input:focus {
-            outline: none;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .border-bx {
+        .border-box {
             box-sizing: border-box;
+        }
+
+        .position-absolute {
+            position: absolute;
+        }
+
+        .position-relative {
+            position: relative;
+        }
+
+        .top-0 {
+            top: 0;
+        }
+
+        .left-0 {
+            left: 0
+        }
+
+        /* .search-icon {
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+    } */
+        .search-icon {
+            right: 15%;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon>i {
+            font-size: 24px;
+            color: #FFB800;
         }
 
         .pt-35 {
@@ -193,7 +191,7 @@
             padding-bottom: 32px;
         }
 
-        .px-6 {
+        .mx-6 {
             margin-left: 6px;
             margin-right: 6px;
         }
@@ -201,97 +199,310 @@
         .btn {
             padding: 5px 15px;
             border-radius: 100px;
-            color: black;
-            background-color: #FFB800;
-            border: 0;
-            font-size: 15px;
+            border: 1px solid #C4C4C4;
+            background-color: transparent;
             transition: all 0.3s ease;
-
         }
 
         .btn:hover {
-            background-color: cadetblue;
-            color: #FFF;
+            color: #fff;
+            background-color: #FFB800;
+            border-color: #FFB800;
             cursor: pointer;
         }
 
-        .h3 {
-            /* position: absolute; */
+        .list-heading {
             font-weight: 500;
             font-size: 20px;
-            line-height: 30px;
-            padding: 32px 18px;
-            padding-bottom: 20px;
-
+            line-height: 27px;
         }
 
-        .row {
-            display: flex;
+        .mb-18 {
+            margin-bottom: 18px;
+        }
+
+        .mb-8 {
+            margin-bottom: 8px;
         }
 
         .card {
-            position: relative;
-            width: 155px;
-            height: 155px;
-            left: 25px;
-            top: 0px;
+            margin: auto;
             border-radius: 10px;
-            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
-            padding-bottom: 25px;
+            /* background: #FFF; */
+            /* filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1)); */
+            box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            margin-bottom: 30px;
         }
 
-        .col {
-            padding: 0 9px;
+
+
+        .card-img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
-        .card>h4 {
-            position: absolute;
+        .card-img img:hover {
+            cursor: pointer;
+        }
+
+        .card-content {
+            /* padding: 4px 14px; */
+            padding-left: 4px;
+            padding-right: 4px;
+            height: 23px;
+        }
+
+        .card-title {
+            font-weight: 500;
+            font-size: 2px;
+            line-height: 15px;
+        }
+
+        .card-icon {
+            width: 15px;
+            height: 15px;
+        }
+
+        .card-icon img {
+            height: 100%;
+
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 26px;
+        }
+
+        .row {
+            flex-wrap: wrap;
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+
+        .col-50 {
+            flex-basis: 50%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .px-12 {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .p-size-85 {
+            padding-top: 85%;
+        }
+
+        .inset {
+            top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            padding: 6px 35px 6px 14px;
         }
 
-        .card>i {
-            display: block;
+        .flex-grow-1 {
+            flex-grow: 1;
         }
 
-        .card>img {
-            left: 0px;
-            display: block;
+        .flex-shrink-0 {
+            flex-shrink: 0;
         }
 
-        .card:hover {
-            background-color: wheat;
+        .text-ellipsis {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .h-100 {
+            height: 100%;
+        }
+
+        .sec4-card {
+            background: #FFFFFF;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+        }
+
+        .sec4-card .card-right {
+            padding: 13px 13px 15px 12px;
+        }
+
+        .font-weight-500 {
+            font-weight: 500;
+        }
+
+        .font-size-12 {
+            font-size: 12px;
+        }
+
+        .line-height-16 {
+            line-height: 16px;
+        }
+
+        .font-weight-bold {
+            font-weight: bold;
+        }
+
+        .font-size-16 {
+            font-size: 16px;
+        }
+
+        .line-height-22 {
+            line-height: 22px;
+        }
+
+        .border-radius-15 {
+            border-radius: 15px;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .ml-1 {
+            margin-left: 1px;
+        }
+
+        .card-button>button {
+            border: 2px dotted #C4C4C4;
+            border-radius: 100px;
+            font-weight: 500;
+            font-size: 12px;
+            color: black;
+            background-color: white;
             transition: all 0.3s ease;
+            padding: 4px 12px;
         }
 
-        .position-absolute {
-            position: absolute;
-
+        .card-button>button:hover {
+            cursor: pointer;
+            background-color: #FFB800;
+            color: white;
+            border: 2px dotted #C4C4C4;
         }
 
-        .position-relative {
-            position: relative;
+        .clamp-line {
+            /* line-height: 16px;
+            max-height: 32px; */
+            overflow: hidden;
+            -webkit-line-clamp: 5;
+            display: box;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
         }
 
-        .top-0 {
-            top: 0;
+
+        /*
+    ** sm 576px 以上
+    ** md 768px 以上
+    ** lg 992px 以上 // 1024px
+    */
+        @media (min-width: 768px) {
+            .md-block {
+                display: block;
+            }
+
+            .md-display-text {
+                font-size: 100px;
+                line-height: 136px;
+            }
+
+            .container {
+                max-width: 716px;
+                margin: 0 auto;
+            }
         }
 
-        .left-0 {
-            left: 0;
+        @media (min-width: 992px) {
+            .px-lg-40 {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .container {
+                max-width: 940px;
+                margin: 0 auto;
+            }
+
+            .col-lg-25 {
+                flex-basis: 25%;
+                flex-grow: 0;
+                flex-shrink: 0;
+                width: 25%;
+            }
+
+            .col-lg-50 {
+                flex-basis: 50%;
+                flex-grow: 0;
+                flex-shrink: 0;
+                width: 50%;
+            }
+
+            .col-100 {
+                flex-basis: 100%;
+                flex-grow: 0;
+                flex-shrink: 0;
+                width: 100%;
+            }
+
+            .col-lg-50 {
+                flex-basis: 50%;
+                flex-grow: 0;
+                flex-shrink: 0;
+                width: 50%;
+            }
+
+            .card-content {
+                height: 55px;
+                padding-left: 32px;
+                padding-right: 15px;
+                /* padding: 13px 15px 17px 32px; */
+            }
+
+            .card-title {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            .card-icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            .list-heading {
+                font-weight: 500;
+                font-size: 32px;
+                line-height: 44px;
+            }
+
+            .text-lg-left {
+                text-align: left;
+            }
         }
 
-        .search-icon {
-            top: 50%;
-            right: 12px;
-            transform: translateY(-60%);
-        }
-
-        .search-icon>i {
-            font-size: 24px;
-            color: #FFB800;
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1148px;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -299,10 +510,10 @@
 <body>
     <header class="position-fixed flex justify-content-between align-items-center pt-20 px-24">
         <div class="logo">
-            <h1 class="logo-h1">Taiwan Go</h1>
+            <h1>Taiwan Go</h1>
         </div>
         <nav class="md-block hide">
-            <ul class="flex ul-dec">
+            <ul class="flex">
                 <li class="px-20 px-lg-20">
                     <a href="javascript:;">找美食</a>
                 </li>
@@ -326,8 +537,8 @@
             <div class="display-box">
                 <h2 class="display-text md-display-text text-center">Taipei ,今天冷</h2>
                 <div class="search-box border-bx text-center">
-                    <div class="position-relative">
-                        <input class="border-bx" type="text" placeholder="玩哪兒?">
+                    <div class="position-relative w-100">
+                        <input class="border-box" type="text" placeholder="玩哪兒?">
                         <div class="position-absolute search-icon">
                             <i class="fa fa-search"></i>
                         </div>
@@ -338,37 +549,128 @@
         <section>
             <h2 class="pt-35 pb-18 text-center">附近城市</h2>
             <div class="flex pb-32 justify-content-center ">
-                <button class="px-6 btn">台北市</button>
-                <button class="px-6 btn">桃園市</button>
-                <button class="px-6 btn">新竹市</button>
-                <button class="px-6 btn">苗栗市</button>
+                <button class="mx-6 btn">台北市</button>
+                <button class="mx-6 btn">桃園市</button>
+                <button class="mx-6 btn">新竹市</button>
+                <button class="mx-6 btn">苗栗市</button>
             </div>
+        </section>
+        <section>
             <div class="container">
-                <h3 class="flex justify-content-center align-items-center">週末好去處</h3>
-                <div class="row">
-                    <div class="col">
+                <h2 class="text-center text-lg-left list-heading mb-18">週末好去處</h2>
+                <div class="flex row">
+                    <div class="col-50 col-lg-25 px-12">
                         <div class="card">
-                            <img class="card" src="/image/city.png" alt="">
-                            <h4 class="flex align-items-center justify-content-between">
-                                <span>台北象山</span>
-                                <i class="fa fa-eye"></i>
-                            </h4>
+                            <div class="card-img p-size-85 position-relative">
+                                <img class="position-absolute inset" src="./image/city.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="flex align-items-center h-100 ">
+                                    <div class="card-title text-ellipsis flex-grow-1">台北象山</div>
+                                    <div class="card-icon flex-shrink-0">
+                                        <img src="./image/like.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-50 col-lg-25 px-12">
                         <div class="card">
-                            <img class="card" src="/image/city.png" alt="">
-                            <h4 class="flex align-items-center justify-content-between">
-                                <span>高雄柴山</span>
-                                <i class="fa fa-eye"></i>
-                            </h4>
-
+                            <div class="card-img p-size-85 position-relative">
+                                <img class="position-absolute inset" src="./image/city.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="flex align-items-center h-100 ">
+                                    <div class="card-title text-ellipsis flex-grow-1">新竹米粉</div>
+                                    <div class="card-icon flex-shrink-0">
+                                        <img src="./image/like.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50 col-lg-25 px-12">
+                        <div class="card">
+                            <div class="card-img p-size-85 position-relative">
+                                <img class="position-absolute inset" src="./image/city.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="flex align-items-center h-100 ">
+                                    <div class="card-title text-ellipsis flex-grow-1">桃園大溪</div>
+                                    <div class="card-icon flex-shrink-0">
+                                        <img src="./images/like.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50 col-lg-25 px-12">
+                        <div class="card">
+                            <div class="card-img p-size-85 position-relative">
+                                <img class="position-absolute inset" src="./image/city.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="flex align-items-center h-100 ">
+                                    <div class="card-title text-ellipsis flex-grow-1">苗栗草莓</div>
+                                    <div class="card-icon flex-shrink-0">
+                                        <img src="./image/like.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <section>
+            <div class="container">
+                <h2 class="text-center text-lg-left list-heading mb-18">日常好美食</h2>
+                <div class="row flex">
+                    <div class="col-100 col-lg-50 px-12 border-box mb-18">
+                        <div class="sec4-card flex border-radius-15">
+                            <div class="card-img col-50 border-radius-15 overflow-hidden">
+                                <img class="ml-1" src="./image/food.jpg" alt="food">
+                            </div>
+                            <div class="col-50 card-right flex flex-deco">
+                                <h3 class="font-weight-bold font-size-16 line-height-22 mb-8 text-ellipsis">台北好好吃</h3>
+                                <div class="font-weight-500 font-size-12 line-height-16 mb-8  flex-grow-1">
+                                    <p class="clamp-line">「一蘭」的高湯全都由日本空運而來，純正天然的豚骨湯頭搭配自家製生麵和秘製辣醬，造就出一份溫柔香醇的拉麵風味。快來排隊
+                                        每日名額有限~快來排隊 每日名額有限~快來排隊
+                                        每日名額有限~
+                                    </p>
+                                </div>
+                                <div class="card-button">
+                                    <button>點我看更多</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-100 col-lg-50 px-12 border-box mb-18">
+                        <div class="sec4-card flex border-radius-15">
+                            <div class="card-img col-50 border-radius-15 overflow-hidden">
+                                <img class="ml-1" src="./image/food.jpg" alt="food">
+                            </div>
+                            <div class="col-50 card-right flex flex-deco">
+                                <h3 class="font-weight-bold font-size-16 line-height-22 mb-8 text-ellipsis">台中好好吃</h3>
+                                <div class="font-weight-500 font-size-12 line-height-16 mb-8  flex-grow-1">
+                                    <p class="clamp-line">「一蘭」的高湯全都由日本空運而來，純正天然的豚骨湯頭搭配自家製生麵和秘製辣醬，造就出一份溫柔香醇的拉麵風味。快來排隊
+                                        每日名額有限~快來排隊 每日名額有限~快來排隊
+                                        每日名額有限~
+                                    </p>
+                                </div>
+                                <div class="card-button">
+                                    <button>點我看更多</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+    </footer>
 </body>
 
 </html>
